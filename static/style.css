@@ -1,0 +1,70 @@
+:root {
+	--main-color: #3725da;
+	--secondary-color: #9225da;
+	--tertiary-color: #256dda;
+}
+
+body {
+	background-color: var(--main-color);
+	margin: 0;
+	height: 100%;
+}
+
+#collapsible-one {
+	background-color: var(--secondary-color);
+	top: 0;
+	z-index: 5;
+}
+
+#collapsible-two {
+	background-color: var(--tertiary-color);
+	top: 30vh; 
+	z-index: 4;
+}
+
+#collapsible-three {
+	background-color: var(--main-color);
+	top: 60vh;
+	z-index: 3;
+}
+
+.collapsibleContainer {	
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 33vh;
+	border-top: solid black 2px;
+	border-bottom: solid black 2px;
+}
+
+.collapsibleContainer:hover {
+	animation: fold-out 2s ease-out 1 forwards;
+}
+
+.collapsibleContainer:not(hover) {
+	animation: fold-in 2s ease-in 1 forwards;
+}
+
+@keyframes fold-out {
+	0% {
+		height: 33vh;		
+		z-index: 6;
+	}
+	
+	100% {
+		top: 0;
+		height: 100vh;
+		z-index: 6;
+	}
+}
+
+@keyframes fold-in {
+	100% {
+		height: 33vh;
+		border-radius: 0% 0% 10% 10%;
+	}
+}
+
+
+
+
