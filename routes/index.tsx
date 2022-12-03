@@ -1,5 +1,7 @@
 import { asset, Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
+import CollapsibleTitle from "../components/CollapsibleTitle.tsx";
+import Signature from "../components/Signature.tsx";
+import CollapsibleContainer from "../islands/CollapsibleContainer.tsx";
 
 export default function Home() {
   return (
@@ -8,10 +10,10 @@ export default function Home() {
         <title>Trying out custom css with fresh and deno</title>
         <link rel="stylesheet" href={asset("/style.css")} />
       </Head>
-      <div id="collapsible-one" class="collapsibleContainer">
-      </div>
-      <div id="collapsible-two" class="collapsibleContainer">
-      </div>
+      <CollapsibleContainer id="collapsible-one" title="About" />
+      <CollapsibleContainer id="collapsible-two" title="Contact" />
+      <CollapsibleContainer id="collapsible-three" title="Projects" />
+      <Signature name="Jeroen Visser" />
     </>
   );
 }
