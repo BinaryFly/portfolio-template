@@ -2,6 +2,8 @@
 	--main-color: #9225da;
 	--secondary-color: #3725da;
 	--tertiary-color: #256dda;
+
+	--closed-collapsible-height: calc(100% / 3);
 }
 
 body {
@@ -41,9 +43,6 @@ body {
 	position: absolute;
 	width: 100%;
 	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-family: monospace;
 }
 
@@ -53,10 +52,13 @@ body {
 }
 
 .closedCollapsible {
-	height: calc(100% / 3);
+	height: var(--closed-collapsible-height);
 	z-index: 0;
-	transition: height 1s ease-out, top 1s ease-out, z-index 2s ease-in, color 0.5s ease-out, filter 0.5s ease-in;
 	cursor: pointer;
+	transition: height 1s ease-out, top 1s ease-out, z-index 2s ease-in, color 0.5s ease-out, filter 0.5s ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .closedCollapsible:hover {
@@ -78,6 +80,14 @@ body {
 .titleContainer {
 	position: relative;
 	text-align: center;
+	height: auto;
+	width: 33%;
+}
+
+.titleUpperLeft {
+	position: relative;
+	text-align: center;
+	width: 15%;
 	height: auto;
 	margin: 0 auto;
 }
