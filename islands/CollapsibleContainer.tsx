@@ -9,16 +9,17 @@ interface ICollapsibleContainerProps {
 
 const CollapsibleContainer = (props: ICollapsibleContainerProps) => {
   const [isFoldedOut, setFoldState] = useState(false);
+
   const getCollapsibleCssClass = () => {
-    return isFoldedOut ? "openCollapsible" : "closedCollapsible";
+    return isFoldedOut ? "open-collapsible" : "";
   };
 
   const getTitleCssClass = () => {
     return isFoldedOut ? "titleUpperLeft" : "titleContainer";
   };
+
   return (
     <div
-      id={props.id}
       class={`collapsible ${getCollapsibleCssClass()}`}
       onClick={() => setFoldState(!isFoldedOut)}
     >

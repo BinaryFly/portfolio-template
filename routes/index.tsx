@@ -10,10 +10,11 @@ export default function Home() {
         <title>Trying out custom css with fresh and deno</title>
         <link rel="stylesheet" href={asset("/style.css")} />
       </Head>
-      <CollapsibleContainer id="collapsible-one" title="About" />
-      <CollapsibleContainer id="collapsible-two" title="Contact" />
-      <CollapsibleContainer id="collapsible-three" title="Projects" />
-      <Signature name="Jeroen Visser" />
+      <div class="collapsible-wrapper">
+        <CollapsibleContainer id="collapsible-one" title="About" />
+        <CollapsibleContainer id="collapsible-two" title="Contact" />
+        <CollapsibleContainer id="collapsible-three" title="Projects" />
+      </div>
     </>
   );
 }

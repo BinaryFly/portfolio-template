@@ -2,8 +2,6 @@
 	--main-color: #9225da;
 	--secondary-color: #3725da;
 	--tertiary-color: #256dda;
-
-	--closed-collapsible-height: calc(100% / 3);
 }
 
 body {
@@ -12,87 +10,7 @@ body {
 	height: 100%;
 }
 
-
-#signature {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	bottom: 5px;
-	left: 5px;
-	z-index: 10;
-	font-family: monospace;
-	font-size: 20px;
+.collapsibleContainer {
+	
 }
 
-#collapsible-one {
-	background-color: var(--tertiary-color);
-	top: 0;
-}
-
-#collapsible-two {
-	background-color: var(--secondary-color);
-	top: calc(100% / 3);
-}
-
-#collapsible-three {
-	background-color: var(--tertiary-color);
-	top: calc(100% / 3 * 2);
-}
-
-.collapsible {
-	position: absolute;
-	width: 100%;
-	color: black;
-	font-family: monospace;
-}
-
-.collapsible h1 {
-	font-family: monospace;
-	font-size: 50px;
-}
-
-.closedCollapsible {
-	height: var(--closed-collapsible-height);
-	z-index: 0;
-	cursor: pointer;
-	transition: height 1s ease-out, top 1s ease-out, z-index 2s ease-in, color 0.5s ease-out, filter 0.5s ease-in;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.closedCollapsible:hover {
-	filter: brightness(0.8);
-}
-
-.openCollapsible {
-	z-index: 5;
-	top: 0 !important;
-	height: 100vh;
-	color: white !important;
-	transition: height 1s ease-out, top 1s ease-out, z-index 0s ease-in, color 0.5s ease-out, filter 0.5s ease-in;
-}
-
-.collapsible:hover {
-	color: white;
-}
-
-.titleContainer {
-	position: relative;
-	text-align: center;
-	height: auto;
-	width: 33%;
-}
-
-.titleUpperLeft {
-	position: relative;
-	text-align: center;
-	width: 15%;
-	height: auto;
-	margin: 0 auto;
-}
-
-.titleContainer h1 {
-	margin: 0;
-	padding: 5px;
-}
