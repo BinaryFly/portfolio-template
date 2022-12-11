@@ -2,15 +2,69 @@
 	--main-color: #9225da;
 	--secondary-color: #3725da;
 	--tertiary-color: #256dda;
+
+	--title-container-background-color: #000;
+	--title-container-color: #fff;
 }
 
 body {
 	background-color: var(--main-color);
 	margin: 0;
-	height: 100%;
+	height: 100vh;
 }
 
-.collapsibleContainer {
+.collapsible-wrapper {
+	/* dimensions */
+	height: calc(100%);
+	cursor: pointer;
+
+	/* flex properties */
+	display: flex;	
+	/* flex-flow: row nowrap;
+	align-items: stretch; */
 	
+	/* text properties */
+	font-family: monospace;
 }
 
+.collapsible-container {
+	/* dimensions */
+	background-color: black;
+	color: white;
+	border: 2px solid grey;
+
+	/* flext properties */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+.collapsible-container:hover {
+	--title-container-color: #000;
+	--title-container-background-color: #fff;
+}
+
+.collapsible-container-fold-in {
+	flex-shrink: 0;
+	visibility: hidden;
+}
+
+.collapsible-container-fold-out {
+	flex: 5 1 100%
+}
+
+.title-container {
+	/* dimensions */
+	width: 100%;
+
+	/* flex properties */
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+
+	/* coloring properties */
+	color: var(--title-container-color);
+	background-color: var(--title-container-background-color);
+}
