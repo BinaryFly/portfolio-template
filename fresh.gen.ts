@@ -7,7 +7,8 @@ import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/index.tsx";
 import * as $$0 from "./islands/CollapsibleContainer.tsx";
-import * as $$1 from "./islands/Counter.tsx";
+import * as $$1 from "./islands/CollapsibleWrapper.tsx";
+import * as $$2 from "./islands/Counter.tsx";
 
 const manifest = {
   routes: {
@@ -17,7 +18,8 @@ const manifest = {
   },
   islands: {
     "./islands/CollapsibleContainer.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
+    "./islands/CollapsibleWrapper.tsx": $$1,
+    "./islands/Counter.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

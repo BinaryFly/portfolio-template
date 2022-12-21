@@ -1,8 +1,5 @@
 :root {
-	--main-color: #9225da;
-	--secondary-color: #3725da;
-	--tertiary-color: #256dda;
-
+    --main-color: #777;
 	--title-container-background-color: #000;
 	--title-container-color: #fff;
 }
@@ -15,13 +12,12 @@ body {
 
 .collapsible-wrapper {
 	/* dimensions */
-	height: calc(100%);
 	cursor: pointer;
 
 	/* flex properties */
 	display: flex;	
-	/* flex-flow: row nowrap;
-	align-items: stretch; */
+	flex-flow: row nowrap;
+	align-items: stretch;
 	
 	/* text properties */
 	font-family: monospace;
@@ -31,7 +27,7 @@ body {
 	/* dimensions */
 	background-color: black;
 	color: white;
-	border: 2px solid grey;
+	border-bottom: 2px solid white;
 
 	/* flext properties */
 	display: flex;
@@ -44,15 +40,6 @@ body {
 .collapsible-container:hover {
 	--title-container-color: #000;
 	--title-container-background-color: #fff;
-}
-
-.collapsible-container-fold-in {
-	flex-shrink: 0;
-	visibility: hidden;
-}
-
-.collapsible-container-fold-out {
-	flex: 5 1 100%
 }
 
 .title-container {
